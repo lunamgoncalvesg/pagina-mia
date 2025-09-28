@@ -1,0 +1,199 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: math;
+  background: url('fondo.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+i{
+  color: #446334;
+}
+
+button i {
+  color: white;
+}
+
+#menu {
+  display: none;
+}
+
+.container {
+  height: 80%;
+  width: 90%;
+  border-radius: 1em;
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  gap: 10em; /*jc:sb no anda, por eso el gap*/
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 2em;
+  padding: 0.7em;
+}
+
+nav a.active {
+  background: #446334;
+  color: white;
+}
+
+nav a:hover {
+  transition: 1s;
+  background: #446334;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+  font-size: 1.3em;
+}
+
+ul {
+  display: flex;
+  gap: 2em;
+}
+
+.panel {
+  display: none;
+  height: 80vh;
+  margin: 2.5vh 1.5vw;
+  border-radius: 2em;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.panel.active {
+  display: flex;
+}
+
+img {
+  width: 30%;
+  height: auto;
+  border-radius: 1em;
+  animation: slide 1.5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.text {
+  width: 45%;
+  height: fit-content;
+  border-radius: 1em;
+  display: flex;
+  background: rgba(255, 255, 255, 0.4);
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.7em;
+  padding: 2em;
+}
+
+main #about .text .pure p a {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+
+button, input[type="submit"], #back {
+  background: #446334;
+  border-radius: 2em;
+  height: fit-content;
+  width: fit-content;
+  padding: 0.9em;
+  display: flex;
+  align-items: center;
+  border: #446334;
+  color: white;
+}
+
+#back {
+  margin-top: 3em;
+}
+
+button:hover, #cart input[type="submit"]:hover, #back:hover {
+  background: #293b1f;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: white;
+}
+
+#cart {
+  display: none;
+  border-radius: 1em;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  margin-top: 1em;
+}
+
+#cart.active {
+  display: grid;
+}
+
+#cart form {
+  display: grid;
+  gap: 1em;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#cart input[type="submit"] {
+  width: 100%;
+}
+
+#cart input {
+  background: rgba(165, 182, 133, 0.7);
+}
+
+#cart input,
+#cart input[type="submit"] {
+  padding: 0.9em 1.5em;
+  border-radius: 2em;
+  border: none;
+  text-align: center;
+  font-size: 1em;
+  color: rgb(47, 47, 47);
+}
+
+::placeholder {
+  color: rgb(47, 47, 47);
+}
+
+@media (max-width: 720px) {
+  /*agregar*/
+}
